@@ -1,17 +1,17 @@
 <html>
 <body>
 
-<form action="blogEntry.php" method="post"
+<form action="writeBlog.php" method="post"
 enctype="multipart/form-data">
 
 
-User: <input type="text" name="fname">
-Password: <input type="text" name="age">
+User: <input type="text" name="user">
+Password: <input type="text" name="passw">
 <hr>
 <br>
 Title: <input type="text" size="50" name="title">
 <br>
-<textarea rows="30" cols="80" name="quote">
+<textarea rows="30" cols="80" name="bentry">
 
 </textarea>
 <br>
