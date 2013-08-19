@@ -1,0 +1,10 @@
+{"BPost": {
+    "post": { 
+        "title": "a title",
+		"body": "main body text",
+		"pics": [
+			{"picName":"name"},
+			{"picName":"name2"}
+		]
+    },
+}}   

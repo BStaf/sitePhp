@@ -1,0 +1,93 @@
+
+body{
+	background-color:#99ccff;
+}
+#InnerPage{
+	background: #F0F0F0;
+	padding-top:70px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width:900px;
+	border:5px solid #C8C8C8 ;
+}
+#InnerPage2{
+	background: #F0F0F0;
+	padding-top:20px;
+	position: relative;
+	z-index:1;
+	width:900px;
+	border:5px solid #C8C8C8 ;
+}
+#titleBox{
+	background: white ;
+	height:70px;
+	width:900px;
+	position: absolute;
+	top:0px;
+}
+#menu{
+	background: white ;
+	height:32px;
+	width:900px;
+	border:1px solid #C8C8C8 ;
+	position: relative;
+	left:-1px;
+}
+#contactBox{
+	background: white ; 
+	height:300px; 
+	width:250px;
+	padding-top:25px;
+	padding-left:15px;
+	border:1px solid #C8C8C8 ;
+	position: absolute;
+	left:625px;
+	top:110px;
+}
+#contentBox{
+	padding:10px;
+	width:600px;
+	position: relative;
+	top:10px;
+}
+#ContentItem{
+	padding:10px;
+	background:#C2D1F3; 
+	position:relative;  
+	border:1px solid #C8C8C8;
+}
+
+#picItem{
+	position: relative;
+	width:400
+	left:100
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:10px;
+}
+
+H3 {
+	margin: 0px;
+	padding-bottom:10px;
+}
+H4 {
+	margin: 0px;
+}
+.menuList{
+	display:inline;
+	margin-right: 20px;
+}
+
+.menuLink{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:20px;
+	position: relative;
+	top:-10px;
+	left:-30px;
+}
+
+.menuLink:link  {text-decoration:none;}
+.menuLink:hover {text-decoration:underline;}
+
+
+	
