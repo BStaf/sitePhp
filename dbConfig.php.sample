@@ -1,6 +1,6 @@
 <?php
 $DatabaseAddress = "Database Host Address";
-$DatabasePort = DataBase host port ass integer;
+$DatabasePort = DataBase host port as integer;
 $DatabaseName = "Database Name";
 $DatabaseUser = "User ID";
 $DatabasePass = "Password";
