@@ -5,7 +5,7 @@
 <script src="js/boxClass.js"></script>
 <script src="js/JSAnimations.js"></script>
 <script src="js/boxes.js"></script>
-<script src="js/BlocksGame3.js"></script>
+<script src="js/BlocksGame.js"></script>
 <!--<script src="js/testScript.js"></script>-->
 <script>
 	var appSelected = 0;
