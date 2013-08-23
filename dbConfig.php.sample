@@ -1,0 +1,7 @@
+<?php
+$DatabaseAddress = "Database Host Address";
+$DatabasePort = DataBase host port ass integer;
+$DatabaseName = "Database Name";
+$DatabaseUser = "User ID";
+$DatabasePass = "Password";
+?>
