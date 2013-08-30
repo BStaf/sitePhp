@@ -1,9 +1,9 @@
 <html>
 <body>
 
-<form action="BlogEditor.php" method="post"
-enctype="multipart/form-data">
+
 <script>
+//dynamically adds file storage 
 
 function addNewPicEntry(){
 	var createEntry = false;
@@ -21,6 +21,8 @@ function addNewPicEntry(){
 }
 addNewPicEntry.picCnt = 0;
 </script>
+<form action="BlogEditor.php" method="post"
+enctype="multipart/form-data">
 <?php
 //include php script with database login info
 include 'dbBlog.php'; 
@@ -41,7 +43,7 @@ If ((!checkInput($user, $MAXUSERLEN)) || (!checkInput($pass, $MAXPASSLEN))){
 if ( isset($_POST["title"]) ) $title = $_POST["title"];
 if ( isset($_POST["bentry"]) ) $data = addslashes($_POST["bentry"]);
 
-echo " User: <input type='text' name='user' value='$user'> 
+echo "User: <input type='text' name='user' value='$user'> 
 Password: <input type='password' name='passw' value='$pass'>
 <hr>
 <br>
@@ -56,21 +58,35 @@ Pictures to Upload:
 
 <div id='PicUpload'></div>
 <script>addNewPicEntry();</script>
-<!--<label for='file'>Picture 1:</label>
-<input type='file' name='Pic1' id='Pic1' onChange='addNewPicEntry()'>
-<br>
-</div>-->
+
 <input type='submit' name='dataSubmit'>
 </form>
 
 <?php
+
 if ($checkUser){
 	$blogWrt = new dbBlog();
 	if ($blogWrt->dbConnect($DatabaseAddress,$DatabasePort,$DatabaseName,$DatabaseUser,$DatabasePass)){
 		if ($blogWrt->checkBlogLogin($user,$pass) > -1){
 			echo "Username and password are valid<br>";
+			//create an array of all picture IDs to pass to the add picture function
+			$picInd = 1;
+			$imgIDAr = array();
+			while (true){
+				$picID = "Pic".$picInd;
+				if (isset($_FILES[$picID]))
+					$imgIDAr[] = "Pic".$picInd;
+				else break;
+				$picInd++; //increment picture counter
+			}
+			//if one or more pictures uploaded, call saveImages
+			if ($picInd > 1) 
+				$blogWrt->saveImages($imgIDAr, "Pic_Uploads/");
+			
 			
 			if ($blogWrt->writeBlog($user, $_POST["title"],$_POST["bentry"])) echo "Write Succesfull\n";
+			
+
 		}
 		else echo "Username and password are invalid<br>";
 	}
