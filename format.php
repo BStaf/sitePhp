@@ -15,9 +15,9 @@
 	</div>';
 	echo '
 	<div id="contactBox">
-		Email: <a href="mailto:will.staf@gmail.com">will.staf@gmail.com</a><br>
-		<a href="http://www.facebook.com/billstaffeldt"><img style="position:relative; top:-2px;" src="/mySite/pics/facebook.png" width="27" height="26" /></a>
-		<a href="http://www.linkedin.com/pub/bill-staffeldt/9/176/168"><img class="button" src="/mySite/pics/linkedin.png" width="30" height="30" /></a>
+		Email: <a href="mailto:mail@gmail.com">will.staf@gmail.com</a><br>
+		<a href="http://www.facebook.com/*****"><img style="position:relative; top:-2px;" src="/mySite/pics/facebook.png" width="27" height="26" /></a>
+		<a href="http://www.linkedin.com/****"><img class="button" src="/mySite/pics/linkedin.png" width="30" height="30" /></a>
 		<br>
 	</div>';
 	
